@@ -1,6 +1,6 @@
-package nl.IPRWC-backend.git.mappers;
+package nl.IPRWC_backend.git.mappers;
 
-import nl.IPRWC-backend.git.models.UserModel;
+import nl.IPRWC_backend.git.models.UserModel;
 import org.skife.jdbi.v2.StatementContext;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 import java.sql.ResultSet;

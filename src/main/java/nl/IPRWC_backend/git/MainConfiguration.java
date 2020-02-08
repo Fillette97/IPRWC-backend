@@ -1,4 +1,4 @@
-package nl.IPRWC-backend.git;
+package nl.IPRWC_backend.git;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

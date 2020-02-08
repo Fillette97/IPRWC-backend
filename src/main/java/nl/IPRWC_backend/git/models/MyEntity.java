@@ -1,4 +1,4 @@
-package nl.IPRWC-backend.git.models;
+package nl.IPRWC_backend.git.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

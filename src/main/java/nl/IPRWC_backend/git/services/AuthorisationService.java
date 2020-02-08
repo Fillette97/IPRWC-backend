@@ -1,4 +1,4 @@
-package nl.IPRWC-backend.git.services;
+package nl.IPRWC_backend.git.services;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

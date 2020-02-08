@@ -1,4 +1,4 @@
-package nl.IPRWC-backend.git;
+package nl.IPRWC_backend.git;
 
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
@@ -19,17 +19,14 @@ import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.migrations.MigrationsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import nl.IPRWC-backend.git.models.UserModel;
-import nl.IPRWC-backend.git.resources.AuthResource;
-import nl.IPRWC-backend.git.services.AuthenticationService;
+import nl.IPRWC_backend.git.models.UserModel;
+import nl.IPRWC_backend.git.resources.AuthResource;
+import nl.IPRWC_backend.git.services.AuthenticationService;
 
 
 public class MainApplication extends Application<MainConfiguration> {
 
-    /**
-     * @param args
-     * @throws Exception
-     */
+
     public static void main(String[] args) throws Exception {
          new MainApplication().run(new String[] {"server", "config.yml"});
     }
@@ -67,19 +64,19 @@ public class MainApplication extends Application<MainConfiguration> {
 	    // Add URL mapping
 	    cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
 	    
-        final ProjectResource resource = new ProjectResource(configuration.getApiKey(), configuration.getUserId());
-        final TripResource tripResource = new TripResource();
-        final VehicleResource vehicleResource = new VehicleResource();
+//        final ProjectResource resource = new ProjectResource(configuration.getApiKey(), configuration.getUserId());
+//        final TripResource tripResource = new TripResource();
+//        final VehicleResource vehicleResource = new VehicleResource();
         final AuthResource authResource = new AuthResource();
         
-    	environment.jersey().register(resource);
-	    environment.jersey().register(tripResource);
+//    	environment.jersey().register(resource);
+//	    environment.jersey().register(tripResource);
 
         environment.jersey().register(new AuthValueFactoryProvider.Binder<>(Principal.class));
         environment.jersey().register(RolesAllowedDynamicFeature.class);
         // code to register module
-        environment.jersey().register(resource);
-	    environment.jersey().register(vehicleResource);
+//        environment.jersey().register(resource);
+//	    environment.jersey().register(vehicleResource);
 	    environment.jersey().register(authResource);
 	    
 	    //toevoegen van de OAuth2 authenticator

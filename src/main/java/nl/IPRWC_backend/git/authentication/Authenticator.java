@@ -1,12 +1,11 @@
-package nl.IPRWC-backend.git.authentication;
+package nl.IPRWC_backend.git.authentication;
 
-import nl.IPRWC-backend.git.models.UserModel;
-import nl.IPRWC-backend.git.persistences.UserPersistence;
+import nl.IPRWC_backend.git.models.UserModel;
 import org.jose4j.jwt.JwtClaims;
 import org.jose4j.jwt.MalformedClaimException;
 import org.jose4j.jwt.NumericDate;
 import org.jose4j.jwt.consumer.JwtContext;
-import org.skife.jdbi.v2.DBI;
+
 import java.util.Optional;
 
 /**

@@ -1,7 +1,7 @@
-package nl.IPRWC-backend.git.persistences;
+package nl.IPRWC_backend.git.persistences;
 
-import nl.IPRWC-backend.git.models.UserModel;
-import nl.IPRWC-backend.git.mappers.UserMapper;
+import nl.IPRWC_backend.git.models.UserModel;
+import nl.IPRWC_backend.git.mappers.UserMapper;
 import org.skife.jdbi.v2.sqlobject.Bind;
 import org.skife.jdbi.v2.sqlobject.SqlQuery;
 import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapper;
