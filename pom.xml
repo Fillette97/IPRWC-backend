@@ -186,9 +186,9 @@
                 <configuration>
                     <changeLogFile>migrations.xml</changeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://manny.db.elephantsql.com:5432/kvszgnmq</url>
-                    <username>kvszgnmq</username>
-                    <password>HLwhrVFmFDIO5LGAtLNPMghrHhQjEbdK</password>
+                    <url>jdbc:postgresql://packy.db.elephantsql.com:5432/tqpudede</url>
+                    <username>tqpudede</username>
+                    <password>CiRAVJqVMu13dczAEbnImOSKIJ3h6Y4L</password>
                 </configuration>
             </plugin>
              <plugin>
