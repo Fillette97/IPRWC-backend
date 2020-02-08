@@ -14,13 +14,13 @@ database:
   driverClass: org.postgresql.Driver
 
   # the username
-  user: kvszgnmq
+  user: tqpudede
 
   # the password
-  password: HLwhrVFmFDIO5LGAtLNPMghrHhQjEbdK
+  password: CiRAVJqVMu13dczAEbnImOSKIJ3h6Y4L
 
   # the JDBC URL
-  url: jdbc:postgresql://manny.db.elephantsql.com:5432/kvszgnmq
+  url: jdbc:postgresql://packy.db.elephantsql.com:5432/tqpudede
 
   # any properties specific to your JDBC driver:
   properties:
