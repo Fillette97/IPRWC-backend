@@ -1,4 +1,4 @@
-package nl.dfbackend.git.resources;
+package nl.IPRWC-backend.git.resources;
 
 import java.sql.SQLException;
 import java.util.Optional;
@@ -10,9 +10,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import nl.dfbackend.git.models.CredentialModel;
-import nl.dfbackend.git.models.UserModel;
-import nl.dfbackend.git.services.AuthenticationService;
+import nl.IPRWC-backend.git.models.CredentialModel;
+import nl.IPRWC-backend.git.models.UserModel;
+import nl.IPRWC-backend.git.services.AuthenticationService;
 
 @Path("/login")
 @Produces(MediaType.APPLICATION_JSON)

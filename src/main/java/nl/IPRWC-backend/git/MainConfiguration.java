@@ -1,4 +1,4 @@
-package nl.dfbackend.git;
+package nl.IPRWC-backend.git;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

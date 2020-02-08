@@ -1,4 +1,4 @@
-package nl.dfbackend.git.services;
+package nl.IPRWC-backend.git.services;
 
 import static org.jose4j.jws.AlgorithmIdentifiers.HMAC_SHA256;
 
@@ -12,10 +12,10 @@ import org.jose4j.keys.HmacKey;
 import org.jose4j.lang.JoseException;
 import org.skife.jdbi.v2.DBI;
 
-import nl.dfbackend.git.models.CredentialModel;
-import nl.dfbackend.git.models.UserModel;
-import nl.dfbackend.git.persistences.UserPersistence;
-import nl.dfbackend.git.util.DbConnector;
+import nl.IPRWC-backend.git.models.CredentialModel;
+import nl.IPRWC-backend.git.models.UserModel;
+import nl.IPRWC-backend.git.persistences.UserPersistence;
+import nl.IPRWC-backend.git.util.DbConnector;
 
 /**
  * All functions are performed in this service.

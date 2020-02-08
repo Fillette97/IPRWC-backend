@@ -1,7 +1,7 @@
-package nl.dfbackend.git.authentication;
+package nl.IPRWC-backend.git.authentication;
 
-import nl.dfbackend.git.models.UserModel;
-import nl.dfbackend.git.persistences.UserPersistence;
+import nl.IPRWC-backend.git.models.UserModel;
+import nl.IPRWC-backend.git.persistences.UserPersistence;
 import org.jose4j.jwt.JwtClaims;
 import org.jose4j.jwt.MalformedClaimException;
 import org.jose4j.jwt.NumericDate;

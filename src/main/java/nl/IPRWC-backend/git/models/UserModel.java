@@ -1,4 +1,4 @@
-package nl.dfbackend.git.models;
+package nl.IPRWC-backend.git.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;

@@ -1,4 +1,4 @@
-package nl.dfbackend.git;
+package nl.IPRWC-backend.git;
 
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
@@ -19,12 +19,9 @@ import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.migrations.MigrationsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import nl.dfbackend.git.models.UserModel;
-import nl.dfbackend.git.resources.AuthResource;
-import nl.dfbackend.git.resources.ProjectResource;
-import nl.dfbackend.git.resources.TripResource;
-import nl.dfbackend.git.resources.VehicleResource;
-import nl.dfbackend.git.services.AuthenticationService;
+import nl.IPRWC-backend.git.models.UserModel;
+import nl.IPRWC-backend.git.resources.AuthResource;
+import nl.IPRWC-backend.git.services.AuthenticationService;
 
 
 public class MainApplication extends Application<MainConfiguration> {

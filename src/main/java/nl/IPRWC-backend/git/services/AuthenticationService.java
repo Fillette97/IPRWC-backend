@@ -1,4 +1,4 @@
-package nl.dfbackend.git.services;
+package nl.IPRWC-backend.git.services;
 
 import java.sql.SQLException;
 import java.util.Optional;
@@ -7,10 +7,10 @@ import org.skife.jdbi.v2.DBI;
 
 import io.dropwizard.auth.AuthenticationException;
 import io.dropwizard.auth.Authenticator;
-import nl.dfbackend.git.models.CredentialModel;
-import nl.dfbackend.git.models.UserModel;
-import nl.dfbackend.git.persistences.UserPersistence;
-import nl.dfbackend.git.util.DbConnector;
+import nl.IPRWC-backend.git.models.CredentialModel;
+import nl.IPRWC-backend.git.models.UserModel;
+import nl.IPRWC-backend.git.persistences.UserPersistence;
+import nl.IPRWC-backend.git.util.DbConnector;
 
 /**
  * @author Oussama Fahchouch

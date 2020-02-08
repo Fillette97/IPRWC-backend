@@ -1,4 +1,4 @@
-package nl.dfbackend.git.util;
+package nl.IPRWC-backend.git.util;
 
 import java.sql.SQLException;
 import org.postgresql.ds.PGSimpleDataSource;

@@ -1,4 +1,4 @@
-package nl.dfbackend.git.health;
+package nl.IPRWC-backend.git.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

@@ -1,6 +1,6 @@
-package nl.dfbackend.git.mappers;
+package nl.IPRWC-backend.git.mappers;
 
-import nl.dfbackend.git.models.UserModel;
+import nl.IPRWC-backend.git.models.UserModel;
 import org.skife.jdbi.v2.StatementContext;
 import org.skife.jdbi.v2.tweak.ResultSetMapper;
 import java.sql.ResultSet;
