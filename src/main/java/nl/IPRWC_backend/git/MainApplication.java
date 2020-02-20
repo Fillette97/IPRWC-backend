@@ -8,6 +8,7 @@ import java.util.EnumSet;
 import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
 
+import nl.IPRWC_backend.git.resources.ProductResource;
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 
@@ -30,18 +31,13 @@ public class MainApplication extends Application<MainConfiguration> {
     public static void main(String[] args) throws Exception {
          new MainApplication().run(new String[] {"server", "config.yml"});
     }
-    
-    /**
-     * @author Oussama Fahchouch
-     */
+
     @Override
     public String getName() {
         return "digitaleFactuurBackEnd";
     }
     
-    /**
-     *  @author Oussama Fahchouch
-     */
+
     @Override
     public void initialize(final Bootstrap<MainConfiguration> bootstrap) {
     	bootstrap.addBundle(new MigrationsBundle<MainConfiguration>() {
@@ -64,20 +60,17 @@ public class MainApplication extends Application<MainConfiguration> {
 	    // Add URL mapping
 	    cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
 	    
-//        final ProjectResource resource = new ProjectResource(configuration.getApiKey(), configuration.getUserId());
-//        final TripResource tripResource = new TripResource();
-//        final VehicleResource vehicleResource = new VehicleResource();
+
         final AuthResource authResource = new AuthResource();
-        
-//    	environment.jersey().register(resource);
-//	    environment.jersey().register(tripResource);
+        final ProductResource pr1 = new ProductResource();
+
+
 
         environment.jersey().register(new AuthValueFactoryProvider.Binder<>(Principal.class));
         environment.jersey().register(RolesAllowedDynamicFeature.class);
-        // code to register module
-//        environment.jersey().register(resource);
-//	    environment.jersey().register(vehicleResource);
+
 	    environment.jersey().register(authResource);
+        environment.jersey().register(pr1);
 	    
 	    //toevoegen van de OAuth2 authenticator
 	    environment.jersey().register(new AuthDynamicFeature(
@@ -85,6 +78,8 @@ public class MainApplication extends Application<MainConfiguration> {
 	    		.setAuthenticator(new AuthenticationService())
 	    		.buildAuthFilter()
 		));
+
+
     }
 
 }
