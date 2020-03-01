@@ -8,7 +8,9 @@ import java.util.EnumSet;
 import javax.servlet.DispatcherType;
 import javax.servlet.FilterRegistration;
 
-import nl.IPRWC_backend.git.resources.ProductResource;
+import io.dropwizard.auth.AuthenticationException;
+import nl.IPRWC_backend.git.resources.ShoeResource;
+
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 
@@ -49,7 +51,7 @@ public class MainApplication extends Application<MainConfiguration> {
     }
 
     @Override
-    public void run(MainConfiguration configuration, Environment environment) throws UnsupportedEncodingException, SQLException {
+    public void run(MainConfiguration configuration, Environment environment) throws UnsupportedEncodingException, SQLException, AuthenticationException {
     	final FilterRegistration.Dynamic cors = environment.servlets().addFilter("CORS", CrossOriginFilter.class);
 
 	    // Configure CORS parameters
@@ -62,7 +64,8 @@ public class MainApplication extends Application<MainConfiguration> {
 	    
 
         final AuthResource authResource = new AuthResource();
-        final ProductResource pr1 = new ProductResource();
+        final ShoeResource s1 = new ShoeResource();
+        s1.getAllShoess();
 
 
 
@@ -70,7 +73,7 @@ public class MainApplication extends Application<MainConfiguration> {
         environment.jersey().register(RolesAllowedDynamicFeature.class);
 
 	    environment.jersey().register(authResource);
-        environment.jersey().register(pr1);
+        environment.jersey().register(s1);
 	    
 	    //toevoegen van de OAuth2 authenticator
 	    environment.jersey().register(new AuthDynamicFeature(
